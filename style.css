@@ -1,0 +1,97 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.sliding-background {
+  overflow: hidden;
+  position: fixed;
+  width: 1000000000%;
+  height: 100%;
+  background: url('./assets/background.png');
+  background-position: bottom; 
+  background-size: auto 100%;
+	animation: slide 10s linear infinite;
+}
+
+@keyframes slide{
+	0%{
+    transform: translate3d(0, 0, 0);
+  }
+  100%{
+    transform: translate3d(-1692px, 0, 0);
+  }
+}
+
+.score {
+  position: absolute;
+  font-size: 5vmin;
+  right: 1vmin;
+  top: 1vmin;
+}
+
+.start-screen {
+  position: absolute;
+  font-size: 5vmin;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+  
+.hide {
+  display: none;
+}
+
+#character {
+  width: 200px;
+  height: 200px;
+  background-image: url(assets/character.png);
+  background-size: 200px 200px;
+  position: absolute;
+  left: 4%;
+  bottom: 0px;
+}
+
+.jump {
+  animation: jump 1s linear;
+}
+
+@keyframes jump {
+  0% {
+    bottom: 150px;
+  }
+
+  30% {
+    bottom: 100px;
+  }
+
+  70% {
+    bottom: 100px;
+  }
+
+  100% {
+    bottom: 150px;
+  }
+}
+
+#monster {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  bottom: 0px;
+  left: 1500px;
+
+  background-image: url("assets/monster.png");
+  background-size: 80px 80px;
+
+  animation: block 2s infinite linear;
+}
+
+@keyframes block {
+  0% {
+    left: 1500px;
+  }
+
+  100% {
+    left: -40px;
+  }
+}
