@@ -1,9 +1,11 @@
 const character = document.getElementById("character");
 const monster = document.getElementById("monster");
 
+//*github dino game and T-Rex game
 const jump = function () {
   if(character.classList!=='jump'){
     character.classList.add('jump');
+    
   }
   setTimeout(function(){
     character.classList.remove('jump');
